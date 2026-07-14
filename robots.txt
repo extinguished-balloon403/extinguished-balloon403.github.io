@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # EDIT: replace YOURUSERNAME once your site is live
-Sitemap: https://YOURUSERNAME.github.io/sitemap.xml
+Sitemap: https://barira02.github.io/brashid02.github.io/sitemap.xml
