@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== EDIT: page title & description (these show in Google results) ===== -->
+<title>Barira Rashid — Remote Sensing &amp; Geospatial AI</title>
+<meta name="description" content="Barira Rashid — PhD scholar in remote sensing and geospatial AI at the University of Arkansas. Mapping animal feeding operations, phosphorus sustainability, and Earth observation for equity." />
+<meta name="author" content="Barira Rashid" />
+
+<!-- ===== Social share card (how the link looks when posted) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Barira Rashid — Remote Sensing & Geospatial AI" />
+<meta property="og:description" content="Mapping farms, water, and habitats from orbit. PhD scholar at the University of Arkansas & NSF STEPS Center." />
+<!-- EDIT: after you go live, put your real URL here -->
+<meta property="og:url" content="https://YOURUSERNAME.github.io/" />
+<meta name="twitter:card" content="summary" />
+<link rel="canonical" href="https://YOURUSERNAME.github.io/" />
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="glyph"><span></span><span></span></span><span id="brand-name">Barira Rashid</span></a>
+    <div class="nav-links">
+      <a href="#storymaps">Story maps</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO + JOURNEY MAP -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal" id="hero-copy"><!-- rendered from data.js --></div>
+    <div class="jmap-panel reveal">
+      <div class="jmap-frame">
+        <div class="jmap-cap"><span>Four degrees · <b>three countries</b></span><span id="jmap-dist"></span></div>
+        <div id="journey"></div>
+      </div>
+      <div class="jkey">
+        <span><i style="background:#FF5C8A"></i>Degrees</span>
+        <span><i style="background:#19C7B6"></i>Field sites</span>
+        <span class="jkey-hint">toggle layers, top right ↗</span>
+      </div>
+      <div class="jmap-foot">
+        <span id="jmap-status">Click a pin · scroll to zoom</span>
+        <span>© OpenStreetMap · CARTO</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STORY MAPS -->
+<section id="storymaps">
+  <div class="wrap reveal">
+    <div class="legend teal">Legend · Story maps</div>
+    <h2 class="section-title">Research you can <em>scroll through</em></h2>
+    <p class="section-sub">Long-form, map-driven narratives — where the data stops being a table and starts being a place.</p>
+    <div class="sm-grid" id="sm-grid"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap reveal">
+    <div class="legend">Legend · About</div>
+    <div class="about-grid" id="about-grid"></div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="wrap reveal">
+    <div class="legend">Legend · Research</div>
+    <h2 class="section-title">What I <em>study</em></h2>
+    <div class="cards" id="research-cards"></div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <div class="wrap reveal">
+    <div class="legend gold">Legend · Publications</div>
+    <h2 class="section-title">Selected <em>publications</em></h2>
+    <div id="pub-list"></div>
+  </div>
+</section>
+
+<!-- HONORS -->
+<section id="honors">
+  <div class="wrap reveal">
+    <div class="legend">Legend · Honors &amp; Awards</div>
+    <h2 class="section-title">Recognition</h2>
+    <div class="honors" id="honor-grid"></div>
+  </div>
+</section>
+
+<!-- SCIENCE COMMUNICATION -->
+<section id="outreach">
+  <div class="wrap reveal">
+    <div class="legend teal">Legend · Science Communication</div>
+    <h2 class="section-title">Beyond the <em>paper</em></h2>
+    <div class="out-list" id="out-list"></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap reveal">
+    <div class="legend hollow">Legend · Education</div>
+    <h2 class="section-title">Trained across three <em>countries</em></h2>
+    <p class="section-sub">The same stops you can click on the map above.</p>
+    <div class="edu" id="edu-list"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap reveal" id="contact-block"></div>
+</section>
+
+<noscript>
+  <div class="wrap" style="padding:40px 30px;">
+    <p>This portfolio uses JavaScript to render its content and maps.
+       Please enable JavaScript, or reach me at <a href="mailto:brashid@uark.edu">brashid@uark.edu</a>.</p>
+  </div>
+</noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

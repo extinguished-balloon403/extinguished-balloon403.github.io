@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# EDIT: replace YOURUSERNAME once your site is live
+Sitemap: https://YOURUSERNAME.github.io/sitemap.xml
